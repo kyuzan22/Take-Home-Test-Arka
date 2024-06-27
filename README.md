@@ -25,7 +25,7 @@ The Inventory API provides endpoints to manage products, users, and client colla
 
 ### How to Run
 
-1. Restore arkadata_test.bak file provided in Database folder to you SQL server
+1. Restore `arkadata_test.bak` file provided in Database folder to you SQL server
 
 2. Clone this repository:
    ```
