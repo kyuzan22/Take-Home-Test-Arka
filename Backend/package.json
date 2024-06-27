@@ -1,0 +1,26 @@
+{
+  "name": "technical_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-dzikriqomar/tech-test.git"
+  },
+  "author": "dzikri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-dzikriqomar/tech-test/issues"
+  },
+  "homepage": "https://github.com/dev-dzikriqomar/tech-test#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mssql": "^11.0.0"
+  }
+}
