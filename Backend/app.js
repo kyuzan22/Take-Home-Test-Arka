@@ -108,12 +108,42 @@ app.get('/api/authProducts', verifyToken, async (req, res) => {
 });
 
 // UnProtected route (not requires authentication)
+app.get('/api/noAuthUsers', async (req, res) => {
+  try {
+    await poolConnect; // Wait for the pool to connect
+
+    // Query the database for products
+    const result = await pool.request().query('SELECT * FROM Users');
+
+    // Send the products as JSON response
+    res.json(result.recordset);
+  } catch (error) {
+    console.error('Error fetching products:', error.message);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 app.get('/api/noAuthProducts', async (req, res) => {
   try {
     await poolConnect; // Wait for the pool to connect
 
     // Query the database for products
     const result = await pool.request().query('SELECT * FROM Products');
+
+    // Send the products as JSON response
+    res.json(result.recordset);
+  } catch (error) {
+    console.error('Error fetching products:', error.message);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+app.get('/api/noAuthClients', async (req, res) => {
+  try {
+    await poolConnect; // Wait for the pool to connect
+
+    // Query the database for products
+    const result = await pool.request().query('SELECT * FROM Clients');
 
     // Send the products as JSON response
     res.json(result.recordset);

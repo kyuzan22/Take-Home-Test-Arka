@@ -27,21 +27,22 @@ The Inventory API provides endpoints to manage products, users, and client colla
 
 1. Restore arkadata_test.bak file provided in Database folder to you SQL server
 
-1. Clone this repository:
+2. Clone this repository:
    ```
    git clone https://github.com/kyuzan22/Take-Home-Test-Arka.git
    ```
 
-2. Set up your environment (e.g., virtual environment, Python 3.8+).
+3. Open Backend folder on your command prompt, gitbash, or visual studio code terminal :
+   ```
+   cd Backend
+   ```
 
-3. Install dependencies for backend:
-   Open Backend folder on your command prompt, gitbash, or visual studio code terminal and run
-
+4. Install dependencies for backend:
    ```
    npm install
    ```
 
-4. Setting the Server connection to your SQL server on dBConfig inside app.js:
+5. Setting the Server connection to your SQL server on dBConfig inside app.js:
    ```
    const dbConfig = {
      user: 'sa', // Replace with your Server authentication user , delete this if you're using windows auth
@@ -54,14 +55,14 @@ The Inventory API provides endpoints to manage products, users, and client colla
    };
    ```
 
-5. Run the API:
+6. Run the API:
    ```
    npm start
    ```
 
-6. Access the API at `http://localhost:3000/api/test`.
+7. Access the API at `http://localhost:3000/api/test`.
 
-7. Open Postman app or other api test tool and run your testing. example:
+8. Open Postman app or other api test tool and run your testing. example:
    - Login (POST) = http://localhost:3000/login
      ```
      {
@@ -77,6 +78,21 @@ The Inventory API provides endpoints to manage products, users, and client colla
    - Product list without Authorization (GET) = http://localhost:3000/api/noAuthProducts
      Can run directly on the link
 
+### Password Hash
+You can create your own password hasher by :
+1. Open file PasswordHasher.js
+
+2. Put your password that want to be hashed on plainPassword const. i.e :
+   ```
+   const plainPassword = 'testPassword';
+   ```
+3. Run the code by run :
+   ```
+   node PasswordHasher.js
+   ```
+
+4. Your hashed password display on log
+
 ## Python Function
 
 ### Remove Duplicates from a List
@@ -89,9 +105,9 @@ The Python function `remove_duplicates(lst)` removes duplicate elements from a l
 
 2. Open file Python_Technical_Test.py in vs code
 
-3. Or Use the cd command to navigate to the directory where Python_Technical_Test.py file is located. For example:
+3. Or Use the cd command to navigate to the directory where Python_Technical_Test.py file is located:
    ```
-   cd d:/Project/Arka/Python
+   cd Python
    ```
 
 4. Run the unit tests:
